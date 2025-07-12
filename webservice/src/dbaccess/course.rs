@@ -1,6 +1,21 @@
-use super::models::*;
+use crate::models::course::Course;
+use crate::errors::MyError;
 use sqlx::MySqlPool;
-use super::errors::MyError;
+
+pub async fn post_new_course_db(pool: &MySqlPool, new_course: Course) -> Result<(), MyError> {
+    let _insert_query = sqlx::query!(
+        "INSERT INTO course (id, teacher_id, name, time)
+            VALUES (?, ?, ?, ?)",
+        new_course.id.unwrap(),
+        new_course.teacher_id,
+        new_course.name,
+        new_course.time
+    )
+        .execute(pool)
+        .await?;
+
+    Ok(())
+}
 
 pub async fn get_courses_for_teacher_db(pool: &MySqlPool, teacher_id: i32) -> Result<Vec<Course>, MyError> {
     let rows: Vec<Course> = sqlx::query_as(
@@ -48,19 +63,4 @@ pub async fn get_course_details_db(pool: &MySqlPool, teacher_id: i32, course_id:
     } else {
         Err(MyError::NotFound("Course didn't founded".into()))
     }
-}
-
-pub async fn post_new_course_db(pool: &MySqlPool, new_course: Course) -> Result<(), MyError> {
-    let _insert_query = sqlx::query!(
-        "INSERT INTO course (id, teacher_id, name, time)
-            VALUES (?, ?, ?, ?)",
-        new_course.id.unwrap(),
-        new_course.teacher_id,
-        new_course.name,
-        new_course.time
-    )
-        .execute(pool)
-        .await?;
-
-    Ok(())
 }
