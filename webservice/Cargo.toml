@@ -1,0 +1,25 @@
+[package]
+name = "webservice"
+version = "0.1.0"
+edition = "2021"
+default-run = "teacher_service"
+
+[[bin]]
+name = "server1"
+# path = "src/bin/server1.rs"
+
+[[bin]]
+name = "teacher_service"
+
+[dependencies]
+actix-web="4.1.0"
+actix-rt="2.7.0"
+dotenv = "0.15.0"
+chrono = {version = "0.4.19", features = ["serde"]}
+serde = {version = "1.0.140", features = ["derive"]}
+sqlx = {version = "0.6.0", default_features = false, features = [
+    "mysql",
+    "runtime-tokio-rustls",
+    "macros",
+    "chrono",
+]}
