@@ -5,6 +5,12 @@
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/webservice/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/webapp/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/wasm-pack-template/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/wasm-pack-template/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/wasm-pack-test/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/wasm-pack-test/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/wasm-game-of-life/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/wasm-game-of-life/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
