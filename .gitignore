@@ -1,1 +1,3 @@
 /target
+/wasm-client/www
+/wasm-pack-template/www
