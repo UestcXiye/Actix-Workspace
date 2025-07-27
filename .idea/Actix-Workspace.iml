@@ -11,6 +11,8 @@
       <sourceFolder url="file://$MODULE_DIR$/wasm-pack-test/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/wasm-game-of-life/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/wasm-game-of-life/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/wasm-client/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/wasm-client/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />

@@ -1,6 +1,7 @@
 [workspace]
 members = [
     "wasm-pack-template",
+    "wasm-client",
     "webapp",
     "webservice",
 ]
